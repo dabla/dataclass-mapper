@@ -1,0 +1,59 @@
+[tool.black]
+# Code length, not docstrings
+line-length = 88
+
+[tool.flake8]
+max-line-length = 99
+extend-ignore = "E203,"
+
+[tool.poetry]
+name = "datamap"
+version = "0.0.16"
+description = "Dataclass mapper using the dacite module"
+authors = ["David Blain <david.blain@infrabel.be>"]
+license = "Proprietary"
+
+[tool.poetry.dependencies]
+python = ">=3.8.0,<3.11"
+python-dotenv = "^0.13.0"
+inflector = "^3.0.1"
+dacite = "^1.6.0"
+more-itertools = "^9.0.0"
+
+[tool.poetry.dev-dependencies]
+black = "22.3.0"
+bump2version = "^1.0.0"
+gitchangelog = "^3.0.4"
+flake8 = "^3.9.2"
+pyproject-flake8 = "^0.0.1a4"
+mypy = "^0.971"
+types-six = "^1.16.15"
+Pallets-Sphinx-Themes = "^2.0.2"
+pylint = "^2.13.9"
+pystache = "^0.6.0"
+pytest = "^7.1.2"
+pytest-cov = "^3.0.0"
+pytest-sugar = "^0.9.4"
+Sphinx = "^4.5.0"
+nose2 = {extras = ["coverage-plugin"], version = "^0.12.0"}
+invoke = "^1.5.0"
+mutpy = "^0.6.1"
+coverage = "^6.4.4"
+assertpy = "^1.1"
+mockito = "^1.4.0"
+freezegun = "^1.2.2"
+
+[[tool.poetry.source]]
+name = "infrabel-pypi"
+url = "https://artifactory.msnet.railb.be/artifactory/api/pypi/pypi/simple/"
+default = true
+
+[[tool.poetry.source]]
+name = "artifactory"
+url = "https://artifactory.msnet.railb.be/artifactory/api/pypi/a1840-bi-pm-pypi/simple/"
+secondary = true
+
+
+[build-system]
+build-backend = "poetry.masonry.api"
+requires = ["poetry>=1.1.11"]

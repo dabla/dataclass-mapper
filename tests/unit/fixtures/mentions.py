@@ -1,0 +1,45 @@
+from dataclasses import dataclass
+from datetime import datetime
+from typing import Optional
+
+
+@dataclass
+class Mentions:
+
+    unique_id: Optional[str]
+    id: Optional[str]
+    author_id: Optional[int]
+    original_author_id: Optional[int]
+    message_title: Optional[str]
+    message_content: Optional[str]
+    message_language: Optional[str]
+    message_sentiment: Optional[str]
+    message_type: Optional[str]
+    source_category: Optional[str]
+    source_service: Optional[str]
+    source_type: Optional[str]
+    source_id: Optional[str]
+    source_in_reply_to_message_id: Optional[str]
+    source_domain: Optional[str]
+    source_url: Optional[str]
+    source_application: Optional[str]
+    source_profile: Optional[str]
+    source_profile_name: Optional[str]
+    location_continent_code: Optional[str]
+    location_country_code: Optional[str]
+    location_city: Optional[str]
+    location_region: Optional[str]
+    location_longitude: Optional[int]
+    location_latitude: Optional[int]
+    topic_id: Optional[int]
+    project_id: Optional[int]
+    status: Optional[str]
+    permalink: Optional[str]
+    assignment_comment: Optional[str]
+    response_time_seconds: Optional[int]
+    response_time_seconds_during_bh: Optional[int]
+    resolve_time_seconds: Optional[int]
+    resolve_time_seconds_during_bh: Optional[int]
+    handle_time_seconds: Optional[int]
+    date_added: Optional[datetime]
+    date_published: Optional[datetime]
