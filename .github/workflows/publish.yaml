@@ -28,4 +28,4 @@ jobs:
 
     - name: Publish to pypi.org
       run: |
-        python -m python -m poetry publish --no-interaction
+        python -m poetry publish --no-interaction
