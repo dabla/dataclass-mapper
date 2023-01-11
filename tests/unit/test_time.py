@@ -1,3 +1,5 @@
+import os
+import time
 import unittest
 from datetime import datetime
 
@@ -7,6 +9,14 @@ from datamap.time import parse_timestamp
 
 
 class TimeTestCase(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        try:
+            os.environ['TZ'] = 'Europe/Brussels'
+            time.tzset()  # will fail on Windows
+        except AttributeError:
+            pass
+
     def test_parse_timestamp_when_linux_timestamp(
         self,
     ):
