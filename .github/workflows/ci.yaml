@@ -15,6 +15,10 @@ jobs:
       with:
         python-version: 3.8
 
+    - name: Create logging and reports directories
+      run: |
+        mkdir -p logs reports
+
     - name: Install poetry
       run: |
         python -m pip install poetry
