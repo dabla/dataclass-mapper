@@ -1,4 +1,4 @@
-name: DataMap
+name: datamap-build
 
 on: [push]
 
