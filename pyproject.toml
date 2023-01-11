@@ -10,8 +10,8 @@ extend-ignore = "E203,"
 name = "datamap"
 version = "0.0.16"
 description = "Dataclass mapper using the dacite module"
-authors = ["David Blain <david.blain@infrabel.be>"]
-license = "Proprietary"
+authors = ["David Blain <info@dabla.be>"]
+license = "Apache-2.0"
 
 [tool.poetry.dependencies]
 python = ">=3.8.0,<3.11"
@@ -42,17 +42,6 @@ coverage = "^6.4.4"
 assertpy = "^1.1"
 mockito = "^1.4.0"
 freezegun = "^1.2.2"
-
-[[tool.poetry.source]]
-name = "infrabel-pypi"
-url = "https://artifactory.msnet.railb.be/artifactory/api/pypi/pypi/simple/"
-default = true
-
-[[tool.poetry.source]]
-name = "artifactory"
-url = "https://artifactory.msnet.railb.be/artifactory/api/pypi/a1840-bi-pm-pypi/simple/"
-secondary = true
-
 
 [build-system]
 build-backend = "poetry.masonry.api"

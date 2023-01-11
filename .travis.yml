@@ -1,0 +1,31 @@
+language: python
+python:
+- 3.8
+before_install:
+- mkdir -p logs reports
+- pip install poetry
+install:
+- poetry install
+
+jobs:
+  include:
+    - stage: flake8
+      script: poetry run pflake8 datamap
+    - stage: mypy
+      script: poetry run mypy datamap --namespace-packages
+    - stage: black
+      script: poetry run black datamap --check --diff --color
+    - stage: pylint
+      script: poetry run pylint --fail-under=6.48 datamap -r n --msg-template="{path}':'{line}':' [{msg_id}({symbol}), {obj}] {msg}" | tee reports/pylint.txt
+    - stage: tests
+      script: poetry run nose2 --start-dir tests/unit --junit-xml --with-coverage --verbose
+    - stage: deploy
+      before_deploy:
+        - poetry config pypi-token.pypi $API_TOKEN
+        - poetry build
+      deploy:
+        provider: script
+        script: poetry publish
+        skip_cleanup: true
+        on:
+          tags: true
