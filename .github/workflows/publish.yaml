@@ -28,4 +28,4 @@ jobs:
 
     - name: Publish to pypi.org
       run: |
-        python -m poetry publish --username ${{ secrets.PYPI_USERNAME }} $ --password ${{ secrets.$PYPI_PASSWORD$ }}
+        python -m poetry publish --username ${{ secrets.PYPI_USERNAME }} --password ${{ secrets.$PYPI_PASSWORD$ }}
