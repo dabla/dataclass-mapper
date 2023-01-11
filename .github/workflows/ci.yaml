@@ -15,29 +15,36 @@ jobs:
       with:
         python-version: 3.8
 
-    - name: Install dependencies
+    - name: Install poetry
       run: |
-        python -m venv venv
-        source venv/bin/activate
-        mkdir -p logs reports
-        pip install poetry
+        python -m pip install poetry
+
+    - name: Configure poetry
+      run: |
+        python -m poetry config pypi-token.pypi $PYPI_API_TOKEN
+
+    - name: Cache the virtualenv
+      uses: actions/cache@v2
+      with:
+        path: ./.venv
+        key: ${{ runner.os }}-venv-${{ hashFiles('**/poetry.lock') }}
 
     - name: Run flake8
       run: |
-        poetry run pflake8 datamap
+        python -m poetry run pflake8 datamap
 
     - name: Run mypy
       run: |
-        poetry run mypy datamap --namespace-packages
+        python -m poetry run mypy datamap --namespace-packages
 
     - name: Run black
       run: |
-        poetry run black datamap --check --diff --color
+        python -m poetry run black datamap --check --diff --color
 
     - name: Run pylint
       run: |
-        poetry run pylint --fail-under=6.48 datamap -r n --msg-template="{path}':'{line}':' [{msg_id}({symbol}), {obj}] {msg}" | tee reports/pylint.txt
+        python -m poetry run pylint --fail-under=6.48 datamap -r n --msg-template="{path}':'{line}':' [{msg_id}({symbol}), {obj}] {msg}" | tee reports/pylint.txt
 
     - name: Run tests
       run: |
-        poetry run nose2 --start-dir tests/unit --junit-xml --with-coverage --verbose
+        python -m poetry run nose2 --start-dir tests/unit --junit-xml --with-coverage --verbose
