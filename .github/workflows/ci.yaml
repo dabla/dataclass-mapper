@@ -25,6 +25,10 @@ jobs:
         path: ./.venv
         key: ${{ runner.os }}-venv-${{ hashFiles('**/poetry.lock') }}
 
+    - name: Install dependencies
+      run: |
+        python -m poetry install -vv
+
     - name: Run flake8
       run: |
         python -m poetry run pflake8 datamap
