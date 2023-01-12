@@ -7,14 +7,11 @@ max-line-length = 99
 extend-ignore = "E203,"
 
 [tool.poetry]
-name = "dataclass-mapper"
+name = "datamap"
 version = "0.0.16"
 description = "Dataclass mapper using the dacite module"
 authors = ["David Blain <info@dabla.be>"]
 license = "Apache-2.0"
-packages = [
-    { include = "datamap" },
-]
 
 [tool.poetry.dependencies]
 python = ">=3.8.0,<3.11"

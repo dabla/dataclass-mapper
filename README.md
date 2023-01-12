@@ -1,4 +1,4 @@
-# Dataclass Mapper [0.0.16]
+# Datamap [0.0.16]
 [![Build Status](https://travis-ci.org/dabla/datamap.svg?branch=master)](https://travis-ci.org/dabla/datamap)
 
 The datamap decorator will apply the PEP8 naming convention on the dict keys, flatten nested dicts if required and map those dicts to dataclasses using the [dacite](https://github.com/konradhalas/dacite) module.
@@ -9,7 +9,7 @@ It is also possible to register custom type converters when needed.
 ## Install
 
 ```bash
-pip install dataclass-mapper==0.0.16
+pip install datamap==0.0.16
 ```
 
 ## Usage
