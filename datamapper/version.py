@@ -24,7 +24,7 @@ __version__: str = "0.0.1"
 def version_as_dict() -> Dict[str, str]:
     """Current version as dictionary.
 
-    Splits the semver version (eg. 1.2.3) into a dictionary
+    Splits the semver version (e.g. 1.2.3) into a dictionary
     with major, minor & patch key.
     """
     major, minor, patch = __version__.split(".")
@@ -34,7 +34,7 @@ def version_as_dict() -> Dict[str, str]:
 def version_as_tuple() -> Tuple[str, str, str]:
     """Current version as tuple.
 
-    Splits the semver version (eg. 1.2.3) into a tuple
+    Splits the semver version (e.g. 1.2.3) into a tuple
     (major, minor, patch).
     """
     major, minor, patch = __version__.split(".")
