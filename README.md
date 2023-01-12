@@ -1,4 +1,4 @@
-# Datamap [0.0.16]
+# Datamapper [0.0.1]
 [![Build Status](https://travis-ci.org/dabla/datamap.svg?branch=master)](https://travis-ci.org/dabla/datamap)
 
 Datamap will apply the PEP8 naming convention on the dict keys, flatten nested dicts if required and map those dicts to dataclasses using the [dacite](https://github.com/konradhalas/dacite) module.
@@ -8,7 +8,7 @@ If the module encounters dict values which are integers but are mapped to a date
 ## Install
 
 ```bash
-pip install datamapper==0.0.16
+pip install datamapper==0.0.1
 ```
 
 ## Usage

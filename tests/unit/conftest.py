@@ -1,13 +1,12 @@
 import logging
-import pytest
-import sys
 import os
-import json
 from distutils import dir_util
+
+import pytest
 
 logger = logging.getLogger(__name__)
 
-VERSION = "0.0.16"
+VERSION = "0.0.1"
 
 # Add custom options to pytest. Here we define the addition of an 'url' argument
 # so you could run `pytest --url <url>` to specify an external url to check real time
