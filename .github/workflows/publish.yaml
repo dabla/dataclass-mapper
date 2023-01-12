@@ -1,4 +1,4 @@
-name: datamap-publish-to-pypi
+name: datamapper-publish-to-pypi
 
 on:
   push:

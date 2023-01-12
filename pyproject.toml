@@ -7,7 +7,7 @@ max-line-length = 99
 extend-ignore = "E203,"
 
 [tool.poetry]
-name = "datamap"
+name = "datamapper"
 version = "0.0.16"
 description = "Dataclass mapper using the dacite module"
 authors = ["David Blain <info@dabla.be>"]

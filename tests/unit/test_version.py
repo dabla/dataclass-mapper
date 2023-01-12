@@ -1,6 +1,6 @@
 import unittest
 
-from datamap.version import __version__, version_as_dict, version_as_tuple
+from datamapper.version import __version__, version_as_dict, version_as_tuple
 from tests.unit.conftest import VERSION
 from assertpy import assert_that
 

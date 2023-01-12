@@ -10,13 +10,13 @@ install:
 jobs:
   include:
     - stage: flake8
-      script: poetry run pflake8 datamap
+      script: poetry run pflake8 datamapper
     - stage: mypy
-      script: poetry run mypy datamap --namespace-packages
+      script: poetry run mypy datamapper --namespace-packages
     - stage: black
-      script: poetry run black datamap --check --diff --color
+      script: poetry run black datamapper --check --diff --color
     - stage: pylint
-      script: poetry run pylint --fail-under=6.48 datamap -r n --msg-template="{path}':'{line}':' [{msg_id}({symbol}), {obj}] {msg}" | tee reports/pylint.txt
+      script: poetry run pylint --fail-under=6.48 datamapper -r n --msg-template="{path}':'{line}':' [{msg_id}({symbol}), {obj}] {msg}" | tee reports/pylint.txt
     - stage: tests
       script: poetry run nose2 --start-dir tests/unit --junit-xml --with-coverage --verbose
     - stage: deploy

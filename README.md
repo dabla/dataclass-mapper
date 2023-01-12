@@ -8,7 +8,7 @@ If the module encounters dict values which are integers but are mapped to a date
 ## Install
 
 ```bash
-pip install datamap==0.0.16
+pip install datamapper==0.0.16
 ```
 
 ## Usage
@@ -17,7 +17,7 @@ pip install datamap==0.0.16
 from dataclasses import dataclass
 from datetime import datetime
 
-from datamap.decorators import datamap
+from datamapper.decorators import datamap
 
 
 @dataclass
@@ -89,8 +89,8 @@ from dataclasses import dataclass
 from typing import Optional
 from uuid import UUID
 
-from datamap.converters import converters
-from datamap.decorators import datamap
+from datamapper.converters import converters
+from datamapper.decorators import datamap
 
 
 @dataclass
@@ -100,8 +100,8 @@ class User:
     name: str
     surname: str
     active: bool
-    
-    
+
+
 def parse_uuid(value: Optional[str]) -> Optional[UUID]:
     if value:
         return UUID(value)

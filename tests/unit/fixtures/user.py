@@ -2,8 +2,8 @@ from dataclasses import dataclass
 from typing import Optional
 from uuid import UUID
 
-from datamap.converters import converters
-from datamap.decorators import datamap
+from datamapper.converters import converters
+from datamapper.decorators import datamap
 
 
 @dataclass

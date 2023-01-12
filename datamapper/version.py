@@ -8,9 +8,9 @@ It's kept in sync with the `bumpversion` tool.
 Example:
     Import the version as constant, dict or tuple:
 
-    >>> from datamap.version import version_as_dict
-    >>> from datamap.version import version_as_tuple
-    >>> from datamap.version import __version__
+    >>> from datamapper.version import version_as_dict
+    >>> from datamapper.version import version_as_tuple
+    >>> from datamapper.version import __version__
 
 Attributes:
     __version__ (str): Current version of datamap package.
