@@ -1,4 +1,4 @@
-name: datamapper-build
+name: datamapperper-build
 
 on: [push]
 
@@ -35,19 +35,19 @@ jobs:
 
     - name: Run flake8
       run: |
-        python -m poetry run pflake8 datamap
+        python -m poetry run pflake8 datamapper
 
     - name: Run mypy
       run: |
-        python -m poetry run mypy datamap --namespace-packages
+        python -m poetry run mypy datamapper --namespace-packages
 
     - name: Run black
       run: |
-        python -m poetry run black datamap --check --diff --color
+        python -m poetry run black datamapper --check --diff --color
 
     - name: Run pylint
       run: |
-        python -m poetry run pylint --fail-under=6.48 datamap -r n --msg-template="{path}':'{line}':' [{msg_id}({symbol}), {obj}] {msg}" | tee reports/pylint.txt
+        python -m poetry run pylint --fail-under=6.48 datamapper -r n --msg-template="{path}':'{line}':' [{msg_id}({symbol}), {obj}] {msg}" | tee reports/pylint.txt
 
     - name: Run tests
       run: |
