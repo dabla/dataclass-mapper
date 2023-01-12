@@ -124,11 +124,3 @@ def get_user() -> User:
         "active": True,
     }
 ```
-
-## Building from source
-
-```bash
-poetry build
-poetry install
-poetry publish -vvv -r artifactory -u USERNAME -p PASSWORD
-```
