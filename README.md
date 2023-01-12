@@ -1,5 +1,5 @@
 # Datamap [0.0.16]
-[![Build Status](https://travis-ci.org/dabla/datamap.svg?branch=master)](https://travis-ci.org/dabla/datamap)
+[![Build Status](https://github.com/github/docs/actions/workflows/build.yml/badge.svg)](https://github.com/dabla/datamap)
 
 The datamap decorator will apply the PEP8 naming convention on the dict keys, flatten nested dicts if required and map those dicts to dataclasses using the [dacite](https://github.com/konradhalas/dacite) module.
 If the module encounters dict values which are integers but are mapped to a datetime in the dataclass, it will also try to convert those to datetime.
