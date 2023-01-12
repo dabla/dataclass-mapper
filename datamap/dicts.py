@@ -21,7 +21,7 @@ from typing import (
 import dacite
 from inflector import Inflector
 
-from datamapper.converters import convert_attributes
+from datamap.converters import convert_attributes
 
 
 def pep8_compliant_keys(value: Dict, inflector: Inflector = Inflector()) -> Dict:

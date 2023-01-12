@@ -1,7 +1,7 @@
 from functools import wraps
 from typing import Type, Optional, Tuple, Sequence, Dict
 
-from datamapper.dicts import from_dicts, T, rename_keys, remove_keys
+from datamap.dicts import from_dicts, T, rename_keys, remove_keys
 
 
 def datamap(

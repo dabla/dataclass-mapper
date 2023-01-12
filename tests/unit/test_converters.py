@@ -4,8 +4,8 @@ from dataclasses import Field, fields
 from assertpy import assert_that
 from mockito import mock
 
-from datamapper.converters import identity, resolve_attribute_type_names, resolve_converter, converter_names
-from datamapper.time import parse_timestamp
+from datamap.converters import identity, resolve_attribute_type_names, resolve_converter, converter_names
+from datamap.time import parse_timestamp
 from tests.unit.fixtures.date_attributes import DateAttribute
 
 

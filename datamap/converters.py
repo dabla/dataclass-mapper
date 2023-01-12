@@ -7,7 +7,7 @@ from typing import Iterable, Dict, Callable, Any, get_args, Optional
 
 from more_itertools import flatten
 
-from datamapper.time import parse_timestamp
+from datamap.time import parse_timestamp
 
 
 def identity(value: Optional[Any]) -> Optional[Any]:

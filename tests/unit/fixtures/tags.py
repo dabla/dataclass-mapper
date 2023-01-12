@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from typing import Any, Optional, Dict
 
-from datamapper.decorators import datamap, rename_dict_keys, remove_dict_keys
+from datamap.decorators import datamap, rename_dict_keys, remove_dict_keys
 
 
 @dataclass

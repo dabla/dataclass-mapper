@@ -1,4 +1,4 @@
-name: datamapperper-build
+name: datamap-build
 
 on: [push]
 
@@ -35,23 +35,20 @@ jobs:
 
     - name: Run flake8
       run: |
-        python -m poetry run pflake8 datamapper
+        python -m poetry run pflake8 datamap
 
     - name: Run mypy
       run: |
-        python -m poetry run mypy datamapper --namespace-packages
+        python -m poetry run mypy datamap --namespace-packages
 
     - name: Run black
       run: |
-        python -m poetry run black datamapper --check --diff --color
+        python -m poetry run black datamap --check --diff --color
 
     - name: Run pylint
       run: |
-        python -m poetry run pylint --fail-under=6.48 datamapper -r n --msg-template="{path}':'{line}':' [{msg_id}({symbol}), {obj}] {msg}" | tee reports/pylint.txt
+        python -m poetry run pylint --fail-under=6.48 datamap -r n --msg-template="{path}':'{line}':' [{msg_id}({symbol}), {obj}] {msg}" | tee reports/pylint.txt
 
     - name: Run tests
       run: |
         python -m poetry run nose2 --start-dir tests/unit --junit-xml --with-coverage --verbose
-
-# python -m poetry publish --build --username $PYPI_USERNAME --password $PYPI_PASSWORD
-# https://towardsdatascience.com/how-to-publish-a-python-package-to-pypi-using-poetry-aa804533fc6f

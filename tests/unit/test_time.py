@@ -5,7 +5,7 @@ from datetime import datetime
 
 from assertpy import assert_that
 
-from datamapper.time import parse_timestamp
+from datamap.time import parse_timestamp
 
 
 class TimeTestCase(unittest.TestCase):

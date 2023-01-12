@@ -4,7 +4,7 @@ from datetime import datetime
 from assertpy import assert_that
 
 import tests
-from datamapper.dicts import flatten_dict, from_dicts, rename_keys, remove_keys, from_collection, from_iterable, from_dict
+from datamap.dicts import flatten_dict, from_dicts, rename_keys, remove_keys, from_collection, from_iterable, from_dict
 from tests.unit.fixtures.date_attributes import DateAttribute
 from tests.unit.fixtures.mentions import Mentions
 

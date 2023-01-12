@@ -3,7 +3,7 @@ from datetime import datetime
 from typing import Optional
 
 import tests
-from datamapper.decorators import datamap
+from datamap.decorators import datamap
 
 
 @dataclass
