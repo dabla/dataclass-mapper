@@ -10,8 +10,10 @@ extend-ignore = "E203,"
 name = "datamap"
 version = "0.0.16"
 description = "Dataclass mapper using the dacite module"
-authors = ["David Blain <info@dabla.be>"]
+authors = ["dabla <info@dabla.be>"]
+readme = "README.md"
 license = "Apache-2.0"
+repository = "https://github.com/dabla/datamap"
 
 [tool.poetry.dependencies]
 python = ">=3.8.0,<3.11"
