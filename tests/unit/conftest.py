@@ -6,7 +6,7 @@ import pytest
 
 logger = logging.getLogger(__name__)
 
-VERSION = "0.0.1"
+VERSION = "0.0.16"
 
 # Add custom options to pytest. Here we define the addition of an 'url' argument
 # so you could run `pytest --url <url>` to specify an external url to check real time
